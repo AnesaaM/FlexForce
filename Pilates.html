@@ -9,7 +9,7 @@
   <title>Pilates</title>
   <style>
     body {
-      background: white;
+      background: black;
       margin: 0;
       padding: 0;
     }
@@ -34,10 +34,11 @@
     .cards-container {
       max-width: 1200px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      justify-content: center;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 4fr));
       gap: 30px;
     margin: 20px;
-    padding: 20px; /* kjo krijon hapësirë brenda kartës */
+    padding: 20px 130px; /* kjo krijon hapësirë brenda kartës */
 
     }
 
@@ -81,10 +82,11 @@
       color: black;
     }
 
-    .offer-section h2 {
+     h2 {
       text-align: center;
       font-size: 2em;
       margin-bottom: 40px;
+      color: white;
     }
 
     .offers {
@@ -157,6 +159,16 @@
     .register:hover {
       background-color: #333;
     }
+
+    hr {
+  height: 2px;
+  background-color: #ccc;
+  border: none;
+  box-shadow: 0 2px 5px rgba(189, 189, 189, 0.2);
+  margin: 30px 0;
+}
+
+
 
   </style>
 </head>
@@ -235,10 +247,10 @@
       </div>
     </div>
   </section>
-
+<hr>
   <!-- INSTRUKTORET -->
-   <h2>Instruktoret:</h2>
-  <p>Zgjidh instruktoren që të frymëzon më shumë!</p>
+   <h2>Instruktorët tonë</h2>
+  <p style="text-align: center; font-size: 1.2em; color: white;" >Zgjidh instruktoren që të frymëzon më shumë!</p>
   <div class="cards-container">
     <div class="card">
       <img src="img/pilates-hero-mobile-min.webp" alt="Arta">
@@ -273,6 +285,13 @@
         <div class="card-content">
           <h2>Ilir Spahiu</h2>
           <p>Pilates për qëndrueshmëri dhe disiplinë.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/KXP-1047577-752px-555x555.jpg" alt="Astrit">
+        <div class="card-content">
+          <h2>Astrit Berisha</h2>
+          <p>Forcë dhe fokus në çdo lëvizje.</p>
         </div>
       </div>
   </div>
