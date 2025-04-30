@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex Force</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Charm:wght@400;700&family=DM+Serif+Text:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pangolin&family=Parkinsans:wght@300..800&family=Poiret+One&family=Quicksand&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="layout.js"></script>
+</head>
+
+<body>
+  <header>
+    <img src="logo.jpeg" alt="" class="logo">
+    <nav>
+      <ul class="navlinks">
+        <li class="items"><a href="#">Home</a></li>
+        <li class="items"><a href="#">Services</a></li>
+        <li class="items"><a href="#">About-Us</a></li>
+        <li class="items"><a href="#">Sign Up</a></li>
+        <li><a href="#"><button>Contact Us</button></a></li>
+        <li onclick="showSidebar()"><a href="#">
+            <ion-icon name="menu-outline"></ion-icon>
+          </a></li>
+      </ul>
+      <ul class="sidebar">
+        <li onclick="closeSidebar()"><a href="#">
+            <ion-icon name="close-outline"></ion-icon>
+          </a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About-Us</a></li>
+        <li><a href="#">Sign Up</a></li>
+        <img src="" alt="">
+      </ul>
+    </nav>
+  </header>
+</body>
+<h2>
+  Adjust the screen to Mobile View to observe the reactions on navigation bar
+</h2>
+<div id="footer"><p>© 2025 Flex Force. All rights reserved.</p></div>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</html>
