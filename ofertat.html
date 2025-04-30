@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+ <html lang="sq">
+ <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=DM+Serif+Text:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pangolin&family=Parkinsans:wght@300..800&family=Poiret+One&family=Quicksand:wght@300..700&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+   <title>Flex Force - Ofertat</title>
+   <style>
+     body {
+       background: white;
+       margin: 0;
+       padding: 0;
+     }
+ 
+     header {
+       color: white;
+       text-align: center;
+       padding: 30px 15px;
+     }
+ 
+     h1 {
+       margin: 0;
+       font-size: 2em;
+     }
+ 
+     p {
+       margin-top: 10px;
+       font-size: 1.1em;
+     }
+ 
+     /* Instruktoret */
+     .cards-container {
+       max-width: 1200px;
+       margin: 40px auto;
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+       gap: 30px;
+       padding: 0 20px;
+     }
+ 
+     .card {
+       background-color: #ffffff;
+       border-radius: 15px;
+       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+       overflow: hidden;
+       transition: transform 0.3s ease;
+     }
+ 
+     .card:hover {
+       transform: translateY(-5px);
+     }
+ 
+     .card img {
+       width: 100%;
+       height: 280px;
+       object-fit: cover;
+     }
+ 
+     .card-content {
+       padding: 20px;
+       text-align: center;
+     }
+ 
+     .card-content h2 {
+       margin: 10px 0;
+       font-size: 1.4em;
+       color: white;
+     }
+ 
+     .card-content p {
+       color: #555;
+       font-size: 1em;
+     }
+ 
+     /* Oferta */
+     .offer-section {
+       background-color: white;
+       padding: 60px 20px;
+       color: black;
+     }
+ 
+     .offer-section h2 {
+       text-align: center;
+       font-size: 2em;
+       margin-bottom: 40px;
+     }
+ 
+     .offers {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+   gap: 25px;
+   max-width: 900px;
+   margin: 0 auto;
+ }
+     .offer-card {
+       background-color: #111;
+       border: 1px solid #444;
+       border-radius: 10px;
+       overflow: hidden;
+       box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+       transition: transform 0.3s ease;
+     }
+ 
+     .offer-card:hover {
+       transform: scale(1.03);
+     }
+ 
+     .card-header {
+       background-color: black;
+       color: white;
+       text-align: center;
+       font-weight: bold;
+       padding: 12px;
+       font-size: 1.1em;
+     }
+ 
+     .card-price {
+       font-size: 2em;
+       text-align: center;
+       padding: 10px 0;
+       font-weight: bold;
+       color: white;
+     }
+ 
+     .features {
+       list-style: none;
+       padding: 0 20px 20px 20px;
+       color: #ddd;
+     }
+ 
+     .features li {
+       margin: 8px 0;
+       position: relative;
+       padding-left: 20px;
+     }
+ 
+     .features li::before {
+       content: "✔";
+       position: absolute;
+       left: 0;
+       color: white;
+     }
+ 
+     .register {
+       display: block;
+       text-align: center;
+       padding: 12px;
+       background-color: #222;
+       color: white;
+       text-decoration: none;
+       border-top: 1px solid #333;
+       font-weight: bold;
+     }
+ 
+     .register:hover {
+       background-color: #333;
+     }
+ 
+   </style>
+ </head>
+ <body>
+ 
+   <section class="offer-section">
+     <h2>PILATES</h2>
+     <div class="offers">
+       <div class="offer-card">
+         <div class="card-header">1 Ditë</div>
+         <div class="card-price">€10</div>
+         <ul class="features">
+           <li>Ambient motivues</li>
+           <li>Trajner të sallës</li>
+           <li>Pajisjet më moderne</li>
+           <li>Sauna</li>
+         </ul>
+         <a href="#" class="register">Regjistrohu Tani</a>
+       </div>
+       <div class="offer-card">
+         <div class="card-header">1 Javë</div>
+         <div class="card-price">€15</div>
+         <ul class="features">
+           <li>Ambient motivues</li>
+           <li>Trajner të sallës</li>
+           <li>Pajisjet më moderne</li>
+           <li>Sauna</li>
+         </ul>
+         <a href="#" class="register">Regjistrohu Tani</a>
+       </div>
+       <div class="offer-card">
+         <div class="card-header">2 Javë</div>
+         <div class="card-price">€25</div>
+         <ul class="features">
+           <li>Ambient motivues</li>
+           <li>Trajner të sallës</li>
+           <li>Pajisjet më moderne</li>
+           <li>Sauna</li>
+         </ul>
+         <a href="#" class="register">Regjistrohu Tani</a>
+       </div>
+       <div class="offer-card">
+         <div class="card-header">1 Muaj</div>
+         <div class="card-price">€40</div>
+         <ul class="features">
+           <li>Ambient motivues</li>
+           <li>Trajner të sallës</li>
+           <li>Pajisjet më moderne</li>
+           <li>Sauna</li>
+         </ul>
+         <a href="#" class="register">Regjistrohu Tani</a>
+       </div>
+       <div class="offer-card">
+         <div class="card-header">3 Muaj</div>
+         <div class="card-price">€100</div>
+         <ul class="features">
+           <li>Ambient motivues</li>
+           <li>Trajner të sallës</li>
+           <li>Pajisjet më moderne</li>
+           <li>Sauna</li>
+         </ul>
+         <a href="#" class="register">Regjistrohu Tani</a>
+       </div>
+       <div class="offer-card">
+         <div class="card-header">6 Muaj</div>
+         <div class="card-price">€200</div>
+         <ul class="features">
+           <li>Ambient motivues</li>
+           <li>Trajner të sallës</li>
+           <li>Pajisjet më moderne</li>
+           <li>Sauna</li>
+         </ul>
+         <a href="#" class="register">Regjistrohu Tani</a>
+       </div>
+     </div>
+   </section>
+ 
+<!--CROSSFIT-->
+<section class="offer-section">
+    <h2>CROSSFIT</h2>
+    <div class="offers">
+      <div class="offer-card">
+        <div class="card-header">1 Ditë</div>
+        <div class="card-price">€10</div>
+        <ul class="features">
+          <li>Ambient motivues</li>
+          <li>Trajner të sallës</li>
+          <li>Pajisjet më moderne</li>
+          <li>Sauna</li>
+          <li>Fitness</li>
+        </ul>
+        <a href="#" class="register">Regjistrohu Tani</a>
+      </div>
+      <div class="offer-card">
+        <div class="card-header">1 Javë</div>
+        <div class="card-price">€40</div>
+        <ul class="features">
+          <li>Ambient motivues</li>
+          <li>Trajner të sallës</li>
+          <li>Pajisjet më moderne</li>
+          <li>Sauna</li>
+          <li>Fitness</li>
+        </ul>
+        <a href="#" class="register">Regjistrohu Tani</a>
+      </div>
+      <div class="offer-card">
+        <div class="card-header">2 Javë</div>
+        <div class="card-price">€50</div>
+        <ul class="features">
+          <li>Ambient motivues</li>
+          <li>Trajner të sallës</li>
+          <li>Pajisjet më moderne</li>
+          <li>Sauna</li>
+          <li>Fitness</li>
+        </ul>
+        <a href="#" class="register">Regjistrohu Tani</a>
+      </div>
+      <div class="offer-card">
+        <div class="card-header">1 Muaj</div>
+        <div class="card-price">€70</div>
+        <ul class="features">
+          <li>Ambient motivues</li>
+          <li>Trajner të sallës</li>
+          <li>Pajisjet më moderne</li>
+          <li>Sauna</li>
+          <li>Fitness</li>
+        </ul>
+        <a href="#" class="register">Regjistrohu Tani</a>
+      </div>
+      <div class="offer-card">
+        <div class="card-header">3 Muaj</div>
+        <div class="card-price">€190</div>
+        <ul class="features">
+          <li>Ambient motivues</li>
+          <li>Trajner të sallës</li>
+          <li>Pajisjet më moderne</li>
+          <li>Sauna</li>
+          <li>Fitness</li>
+        </ul>
+        <a href="#" class="register">Regjistrohu Tani</a>
+      </div>
+      <div class="offer-card">
+        <div class="card-header">6 Muaj</div>
+        <div class="card-price">€360</div>
+        <ul class="features">
+          <li>Ambient motivues</li>
+          <li>Trajner të sallës</li>
+          <li>Pajisjet më moderne</li>
+          <li>Sauna</li>
+          <li>Fitness</li>
+        </ul>
+        <a href="#" class="register">Regjistrohu Tani</a>
+      </div>
+    </div>
+  </section>
+ 
+<!--YOGA-->
+  <section class="offer-section">
+    <h2>YOGA</h2>
+    <div class="offers">
+      <div class="offer-card">
+        <div class="card-header">1 Ditë</div>
+        <div class="card-price">€10</div>
+        <ul class="features">
+          <li>Ambient motivues</li>
+          <li>Trajner të sallës</li>
+          <li>Pajisjet më moderne</li>
+          <li>Sauna</li>
+          <li>Fitness</li>
+        </ul>
+        <a href="#" class="register">Regjistrohu Tani</a>
+      </div>
+      <div class="offer-card">
+        <div class="card-header">1 Javë</div>
+        <div class="card-price">€20</div>
+        <ul class="features">
+          <li>Ambient motivues</li>
+          <li>Trajner të sallës</li>
+          <li>Pajisjet më moderne</li>
+          <li>Sauna</li>
+          <li>Fitness</li>
+
+        </ul>
+        <a href="#" class="register">Regjistrohu Tani</a>
+      </div>
+      <div class="offer-card">
+        <div class="card-header">2 Javë</div>
+        <div class="card-price">€30</div>
+        <ul class="features">
+          <li>Ambient motivues</li>
+          <li>Trajner të sallës</li>
+          <li>Pajisjet më moderne</li>
+          <li>Sauna</li>
+          <li>Fitness</li>
+        </ul>
+        <a href="#" class="register">Regjistrohu Tani</a>
+      </div>
+      <div class="offer-card">
+        <div class="card-header">1 Muaj</div>
+        <div class="card-price">€50</div>
+        <ul class="features">
+          <li>Ambient motivues</li>
+          <li>Trajner të sallës</li>
+          <li>Pajisjet më moderne</li>
+          <li>Sauna</li>
+          <li>Fitness</li>
+        </ul>
+        <a href="#" class="register">Regjistrohu Tani</a>
+      </div>
+      <div class="offer-card">
+        <div class="card-header">3 Muaj</div>
+        <div class="card-price">€140</div>
+        <ul class="features">
+          <li>Ambient motivues</li>
+          <li>Trajner të sallës</li>
+          <li>Pajisjet më moderne</li>
+          <li>Sauna</li>
+          <li>Fitness</li>
+        </ul>
+        <a href="#" class="register">Regjistrohu Tani</a>
+      </div>
+      <div class="offer-card">
+        <div class="card-header">6 Muaj</div>
+        <div class="card-price">€250</div>
+        <ul class="features">
+          <li>Ambient motivues</li>
+          <li>Trajner të sallës</li>
+          <li>Pajisjet më moderne</li>
+          <li>Sauna</li>
+          <li>Fitness</li>
+        </ul>
+        <a href="#" class="register">Regjistrohu Tani</a>
+      </div>
+    </div>
+  </section>
+   <footer>
+     &copy; 2025 Pilates Studio. Të gjitha të drejtat e rezervuara.
+   </footer>
+ 
+ </body>
+ </html>
