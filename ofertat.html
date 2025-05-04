@@ -1,6 +1,6 @@
 <!DOCTYPE html>
  <html lang="sq">
- <head>
+ <head> 
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
    <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,11 +14,134 @@
        padding: 0;
      }
  
-     header {
-       color: white;
-       text-align: center;
-       padding: 30px 15px;
-     }
+     *{  
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    
+    background-image: url("img/background.png");
+    background-size: cover;
+    background-position: center;
+
+}
+.logo {
+   color: bisque;
+    position: absolute;
+    left: 20px;
+    width: 150px;
+    cursor: pointer;
+}
+
+li, a, button{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: bisque;
+    text-decoration: none;
+    
+}
+header{
+    background-color:#1a1a1a;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 2px 2px 10px black;
+}
+header:hover{
+    box-shadow: 2px 2px 25px black;
+    transition: 0.5s;
+}
+.navlinks li{
+    display: inline-block;
+    margin: 30px;
+    align-items: center;
+}
+.navlinks li a:hover{
+   text-shadow: 1px 1px 2px  hwb(0 100% 0% / 0.818);
+}
+
+button{
+    width: 100%;
+    padding: 12px;
+    background-color: #0097B2;
+    border-radius: 50px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.5s, ease 0s;
+    border: none;
+    z-index: 999;
+}
+button:hover{
+    box-shadow: 1px 1px 5px rgb(255, 255, 255);
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    z-index: 999;
+    background-color: #1a1a1af2;
+    backdrop-filter: blur(10px);
+    box-shadow: -3px 0 10px black;
+    display: none;
+    justify-content: flex-start;
+    list-style: none;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+}
+.sidebar li{
+    width: 100%;
+    margin: 25px;
+    text-shadow: 1px 1px 2px black;
+    
+}
+.sidebar li:hover{
+  text-decoration: underline;
+  text-decoration-color:wheat ;
+}
+.sidebar img{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    height: 120px;
+}
+nav ion-icon{
+    font-size: 2em;
+    position: absolute;
+    top: 35px;
+    right: 20px;
+}
+h2{ 
+    color: wheat;
+    text-shadow: #002423 -2px 2px 10px;
+    font-size: 2em;
+    margin: 20%;
+    text-align: center;
+}
+@media only screen and (min-width: 830px){
+    .navlinks ion-icon{
+        display: none;
+        
+    }
+      button{
+      display: none;
+    }
+}
+@media only screen and (max-width: 830px){
+    .navlinks .items{
+        display: none;
+    }
+     button{
+      display: none;
+    }
+    .logo{
+      width: 70px;
+    }
+}
  
      h1 {
        margin: 0;
@@ -66,7 +189,7 @@
      .card-content h2 {
        margin: 10px 0;
        font-size: 1.4em;
-       color: white;
+       color: rgb(0, 0, 0);
      }
  
      .card-content p {
@@ -161,8 +284,31 @@
    </style>
  </head>
  <body>
- 
-   <section class="offer-section">
+  <header>
+    <img src="img/logo.jpeg" alt="" class="logo">
+    <nav>
+      <ul class="navlinks">
+        <li class="items"><a href="#"><i class="bi bi-house"> Home</i></a></li>
+        <li class="items"><a href="#"> <i class="bi bi-pencil-square"> Services</i></a></li>
+        <li class="items"><a href="#"><i class="bi bi-file-earmark-person-fill"> About-Us</i></a></li>
+        <li class="items"><a href="#"><i class="bi bi-box-arrow-in-right"> Sign Up</i></a></li>
+        <li><a href="#"><button><i class="bi bi-telephone"> Contact Us</i></button></a></li>
+        <li onclick="showSidebar()"><a href="#">
+            <ion-icon name="menu-outline"></ion-icon>
+          </a></li>
+      </ul>
+      <ul class="sidebar">
+        <li onclick="closeSidebar()"><a href="#">
+            <ion-icon name="close-outline"></ion-icon>
+          </a></li>
+          <li class="items"><a href="#"><i class="bi bi-house"> Home</i></a></li>
+          <li class="items"><a href="#"> <i class="bi bi-pencil-square"> Services</i></a></li>
+          <li class="items"><a href="#"><i class="bi bi-file-earmark-person-fill"> About-Us</i></a></li>
+          <li class="items"><a href="#"><i class="bi bi-box-arrow-in-right"> Sign Up</i></a></li>
+        <img src="" alt="">
+      </ul>
+    </nav>
+  </header>   <section class="offer-section">
      <h2>PILATES</h2>
      <div class="offers">
        <div class="offer-card">
